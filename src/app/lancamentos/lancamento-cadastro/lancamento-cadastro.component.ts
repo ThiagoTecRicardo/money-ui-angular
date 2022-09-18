@@ -1,11 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm, FormControl } from '@angular/forms';
+import { NgForm, FormControl, FormBuilder, Validators } from '@angular/forms';
 import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
 import { MessageService } from 'primeng/api';
-
 
 import { PessoaService } from 'src/app/pessoas/pessoa.service';
 import { CategoriaService } from '../../categorias/categoria.service';
@@ -27,6 +26,8 @@ export class LancamentoCadastroComponent implements OnInit {
 
   lancamento = new Lancamento();
 
+  formulario: FormControl | any;
+
   tipos = [
     { label: 'Receita', value: 'RECEITA' },
     { label: 'Despesa', value: 'DESPESA' },
@@ -41,11 +42,13 @@ export class LancamentoCadastroComponent implements OnInit {
     private pessoaService: PessoaService,
     private route: ActivatedRoute,
     private router: Router,
-    private title: Title
+    private title: Title,
+    private formBuild: FormBuilder,
   ) { }
 
   ngOnInit(): void {
 
+    this.configurarFormulario();
 
     const codigoLancamento = this.route.snapshot.params['codigo'];
 
@@ -57,6 +60,27 @@ export class LancamentoCadastroComponent implements OnInit {
 
     this.carregarCategorias();
     this.carregarPessoas();
+  }
+
+  configurarFormulario(){
+    
+    this.formulario = this.formBuild.group({
+      codigo: [null],
+      tipo: ['RECEITA', Validators.required],
+      dataVencimento: [null, Validators.required],
+      dataPagamento: [],
+      descricao: [null, [Validators.required, Validators.minLength(5)]],
+      valor: [null, Validators.required],
+      categoria: this.formBuild.group({
+        codigo: [null, Validators.required],
+        nome: []
+      }), 
+      pessoa: this.formBuild.group({
+        codigo: [null, Validators.required],
+        nome: []
+      }),
+      observacao: []
+    });
   }
 
 

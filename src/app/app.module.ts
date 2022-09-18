@@ -10,8 +10,6 @@ import { RouterModule, Routes } from '@angular/router';
 
 
 import { AppComponent } from './app.component';
-import { PessoasModule } from './pessoas/pessoas.module';
-import { LancamentosModule } from './lancamentos/lancamentos.module';
 import { CoreModule } from './core/core.module';
 
 import { PaginaNaoEncontradaComponent } from './core/pagina-nao-encontrada.component';
@@ -29,9 +27,7 @@ registerLocaleData(localePt);
 const routes: Routes = [
   {path: '', redirectTo: 'lancamentos', pathMatch: 'full'},
   {path: 'pagina-nao-encontrada', component: PaginaNaoEncontradaComponent},
-  {path: '**', redirectTo: 'pagina-nao-encontrada'},
-
-
+  {path: '**', redirectTo: 'pagina-nao-encontrada'}
 
 ]
 
@@ -56,8 +52,6 @@ TranslateModule.forRoot({
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
 
-    LancamentosModule,
-    PessoasModule,
     CoreModule,
     HttpClientModule,
     SegurancaModule,
