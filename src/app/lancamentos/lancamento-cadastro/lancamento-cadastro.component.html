@@ -30,9 +30,9 @@
         <input pInputText type="text" name="descricao"  formControlName="descricao">
 
         <app-message [control]="formulario.get('descricao')" error="required" text="Informe uma descrição"></app-message>
-        <app-message [control]="formulario.descricao" error="minlength"
+        <!-- <app-message [control]="formulario.descricao" error="minlength"
           text="Mínimo de {{ formulario.get('descricao').errors?.['minlength']?.requiredLength }} caracteres.">
-        </app-message>
+        </app-message> -->
       </div>
 
 
