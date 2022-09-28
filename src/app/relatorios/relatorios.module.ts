@@ -1,18 +1,28 @@
-import { NgModule } from '@angular/core';
+
+
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+import { CalendarModule } from 'primeng/calendar';
 
 import { RelatoriosRoutingModule } from './relatorios-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { RelatorisLancamentosComponent } from './relatoris-lancamentos/relatoris-lancamentos.component';
+import { RelatoriosLancamentosComponent } from './relatorios-lancamentos/relatorios-lancamentos.component';
+
+
 
 
 @NgModule({
-  declarations: [
-    RelatorisLancamentosComponent
-  ],
+  declarations: [RelatoriosLancamentosComponent],
   imports: [
- 
+  
   CommonModule,
+    FormsModule,
+    
+
+    CalendarModule,
+
     SharedModule,
     RelatoriosRoutingModule
   ]

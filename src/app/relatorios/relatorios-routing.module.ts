@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../seguranca/auth.guard';
+import { RelatoriosLancamentosComponent } from './relatorios-lancamentos/relatorios-lancamentos.component';
 
-import { RelatorisLancamentosComponent } from './relatoris-lancamentos/relatoris-lancamentos.component';
+
 
 const routes: Routes = [
   {
     path: 'lancamentos',
-    component: RelatorisLancamentosComponent,
+    component: RelatoriosLancamentosComponent,
     canActivate: [AuthGuard],
     data: {roloes: ['ROLE_PESQUISAR_LANCAMENTOS']}
   }
@@ -16,6 +17,7 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   
+
 
 exports: [RouterModule]
 })
