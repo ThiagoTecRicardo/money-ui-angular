@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
@@ -21,6 +21,7 @@
     "@auth0/angular-jwt": "^5.0.2",
     "@ngx-translate/core": "^14.0.0",
     "@ngx-translate/http-loader": "^7.0.0",
+    "chart.js": "^3.6.0",
     "moment": "^2.29.4",
     "ng2-currency-mask": "^13.0.3",
     "primeflex": "^3.2.1",
@@ -29,7 +30,6 @@
     "rxjs": "~7.5.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.11.4"
-    
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.1.2",
@@ -43,10 +43,5 @@
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
     "typescript": "~4.7.2"
-
-  },
-  "engines": {
-    "node": "v16.13.1",
-    "npm": "8.1.2"
   }
 }
