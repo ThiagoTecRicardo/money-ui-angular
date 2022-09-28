@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmoney_ui=self.webpackChunkmoney_ui||[]).push([[812],{9812:(i,t,u)=>{u.r(t),u.d(t,{RelatoriosRoutingModule:()=>r});var n=u(5479),l=u(8274);const e=[];let r=(()=>{class o{}return o.\u0275fac=function(a){return new(a||o)},o.\u0275mod=l.oAB({type:o}),o.\u0275inj=l.cJS({imports:[n.Bz.forChild(e),n.Bz]}),o})()}}]);
