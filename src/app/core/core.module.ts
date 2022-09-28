@@ -11,9 +11,10 @@ import { ErrorHandlerService } from './error-handler.service';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LancamentoService } from '../lancamentos/lancamento.service';
 import { AuthService } from '../seguranca/auth.service';
+import { DashboardService } from '../dashboard/dashboard.service';
 
 
-import { AvatarModule } from 'primeng/avatar';
+
 import { ToastModule } from 'primeng/toast';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
 import { ConfirmationService, MessageService } from 'primeng/api';
@@ -31,6 +32,7 @@ import { HttpClient } from '@angular/common/http';
 
   ],
   imports: [
+
 
     CommonModule,
     RouterModule,
@@ -57,6 +59,7 @@ import { HttpClient } from '@angular/common/http';
       ErrorHandlerService,
       LancamentoService,
       MessageService,
+      DashboardService,
       ConfirmationService,
 
       TranslateService,

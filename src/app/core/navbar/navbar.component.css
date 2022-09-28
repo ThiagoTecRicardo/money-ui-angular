@@ -52,3 +52,8 @@
 .navbar-menuitem.ativo{
   background-color: #494951;
 }
+
+.navbar-toggle{
+  color: #fff;
+  padding: inherit;
+}
