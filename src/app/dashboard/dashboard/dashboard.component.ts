@@ -1,3 +1,4 @@
+import { DecimalPipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { DashboardService } from '../dashboard.service';
 
@@ -12,6 +13,35 @@ export class DashboardComponent implements OnInit {
 
   pieChartData: any;
   lineChartData: any;
+  optionsLine = {
+    plugins: {
+      tooltip: {
+        callbacks: {
+          label: (context: any): any => {
+            let label = context.dataset.label || '';
+            let value = context.raw || 0;
+            let formattedValue = this.decimalPipe.transform(value, '1.2-2', 'pt_BR');
+            return `${label}: ${formattedValue}`;
+          }
+        }
+      }
+    }
+  }
+
+  optionsPie = {
+    plugins: {
+      tooltip: {
+        callbacks: {
+          label: (context: any): any => {
+            let label = context.label || '';
+            let value = context.raw || 0;
+            let formattedValue = this.decimalPipe.transform(value, '1.2-2', 'pt_BR');
+            return `${label}: ${formattedValue}`;
+          }
+        }
+      }
+    }
+  }
 
   basicData = {
     labels: ['Janeiro', 'Fevereiro', 'Março', 'April', 'Maio', 'Junho', 'Julho', 'Agosto'],
@@ -28,9 +58,13 @@ export class DashboardComponent implements OnInit {
         }
     ]
 };
+  
 
 
-  constructor(private dashboardService: DashboardService) { }
+  constructor(
+    private dashboardService: DashboardService,
+    private decimalPipe: DecimalPipe
+  ) { }
 
 
   ngOnInit() {
