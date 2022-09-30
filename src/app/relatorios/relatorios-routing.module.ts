@@ -1,14 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from '../seguranca/auth.guard';
-import { RelatoriosLancamentosComponent } from './relatorios-lancamentos/relatorios-lancamentos.component';
+import { RelatorioLancamentosComponent } from './relatorio-lancamentos/relatorio-lancamentos.component';
 
 
 
 const routes: Routes = [
   {
     path: 'lancamentos',
-    component: RelatoriosLancamentosComponent,
+    component: RelatorioLancamentosComponent,
     canActivate: [AuthGuard],
     data: {roloes: ['ROLE_PESQUISAR_LANCAMENTOS']}
   }

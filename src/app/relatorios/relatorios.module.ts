@@ -8,13 +8,13 @@ import { CalendarModule } from 'primeng/calendar';
 
 import { RelatoriosRoutingModule } from './relatorios-routing.module';
 import { SharedModule } from '../shared/shared.module';
-import { RelatoriosLancamentosComponent } from './relatorios-lancamentos/relatorios-lancamentos.component';
+import { RelatorioLancamentosComponent } from './relatorio-lancamentos/relatorio-lancamentos.component';
 
 
 
 
 @NgModule({
-  declarations: [RelatoriosLancamentosComponent],
+  declarations: [RelatorioLancamentosComponent],
   imports: [
   
   CommonModule,
