@@ -12,6 +12,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LancamentoService } from '../lancamentos/lancamento.service';
 import { AuthService } from '../seguranca/auth.service';
 import { DashboardService } from '../dashboard/dashboard.service';
+import { RelatoriosService } from '../relatorios/relatorios.service';
 
 
 
@@ -60,6 +61,7 @@ import { HttpClient } from '@angular/common/http';
       LancamentoService,
       MessageService,
       DashboardService,
+      RelatoriosService,
       ConfirmationService,
 
       TranslateService,

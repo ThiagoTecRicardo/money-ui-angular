@@ -9,6 +9,8 @@ import { InputMaskModule } from 'primeng/inputmask';
 import { InputTextModule } from 'primeng/inputtext';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
+import { PanelModule } from 'primeng/panel';
+import { DialogModule } from 'primeng/dialog';
 
 
 import { CadastroPessoalComponent } from './cadastro-pessoa/cadastro-pessoa.componen';
@@ -16,6 +18,7 @@ import { CadastroPessoalComponent } from './cadastro-pessoa/cadastro-pessoa.comp
 import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
 import { SharedModule } from '../shared/shared.module';
 import { PessoasRoutingModule } from './pessoas-routing-module';
+
 
 
 
@@ -28,10 +31,12 @@ import { PessoasRoutingModule } from './pessoas-routing-module';
     RouterModule,
 
     InputTextModule,
+    PanelModule,
     ButtonModule,
     TableModule,
     TooltipModule,
     InputMaskModule,
+    DialogModule,
     SharedModule,
     PessoasRoutingModule
   ],
