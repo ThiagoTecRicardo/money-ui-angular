@@ -32,11 +32,12 @@ import { PessoasRoutingModule } from './pessoas-routing-module';
 
     InputTextModule,
     PanelModule,
+    DialogModule,
     ButtonModule,
     TableModule,
     TooltipModule,
     InputMaskModule,
-    DialogModule,
+    
     SharedModule,
     PessoasRoutingModule
   ],

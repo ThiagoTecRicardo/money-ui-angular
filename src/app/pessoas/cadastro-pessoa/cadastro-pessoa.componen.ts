@@ -15,6 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class CadastroPessoalComponent implements OnInit {
 
   pessoa = new Pessoa();
+  exbindoFormularioContato = false;
 
   constructor(
     private pessoaService: PessoaService,
@@ -33,6 +34,10 @@ export class CadastroPessoalComponent implements OnInit {
     if (codigoPessoa && codigoPessoa !== 'nova') {
       this.carregarPessoa(codigoPessoa);
     }
+  }
+
+  prepararNovoContato() {
+    this.exbindoFormularioContato = true;
   }
 
   get editando() {
