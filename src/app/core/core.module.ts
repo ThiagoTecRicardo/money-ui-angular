@@ -1,5 +1,5 @@
 import { LOCALE_ID, NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { TranslateLoader, TranslateModule, TranslateService } from '@ngx-translate/core';
@@ -57,6 +57,7 @@ import { HttpClient } from '@angular/common/http';
     ConfirmDialogModule
   ],
     providers: [
+      DatePipe,
       ErrorHandlerService,
       LancamentoService,
       MessageService,
