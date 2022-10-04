@@ -17,6 +17,7 @@ export class CadastroPessoalComponent implements OnInit {
   pessoa = new Pessoa();
   exbindoFormularioContato = false;
   contato?: Contato;
+  contatoIndex?: number;
 
   constructor(
     private pessoaService: PessoaService,
@@ -40,10 +41,17 @@ export class CadastroPessoalComponent implements OnInit {
   prepararNovoContato() {
     this.exbindoFormularioContato = true;
     this.contato = new Contato();
+    this.contatoIndex = this.pessoa.contatos.length;
+  }
+
+  prepararEdicaoContato(contato: Contato, index: number) {
+    this.contato = this.clonarContato(contato);
+    this.exbindoFormularioContato = true;
+    this.contatoIndex = index;
   }
 
   confirmarContato(frm: NgForm) {
-    this.pessoa.contatos.push(this.clonarContato(this.contato!));
+    this.pessoa.contatos[this.contatoIndex!] = this.clonarContato(this.contato!);
     this.exbindoFormularioContato = false;
     frm.reset();
   }
