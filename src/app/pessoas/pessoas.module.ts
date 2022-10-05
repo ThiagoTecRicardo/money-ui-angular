@@ -18,6 +18,7 @@ import { CadastroPessoalComponent } from './cadastro-pessoa/cadastro-pessoa.comp
 import { PessoasPesquisaComponent } from './pessoas-pesquisa/pessoas-pesquisa.component';
 import { SharedModule } from '../shared/shared.module';
 import { PessoasRoutingModule } from './pessoas-routing-module';
+import { PessoaCadastroContatoComponent } from './pessoa-cadastro-contato/pessoa-cadastro-contato.component';
 
 
 
@@ -44,7 +45,8 @@ import { PessoasRoutingModule } from './pessoas-routing-module';
   declarations: [
 
     PessoasPesquisaComponent,
-    CadastroPessoalComponent
+    CadastroPessoalComponent,
+    PessoaCadastroContatoComponent
   ],
   exports: []
 
