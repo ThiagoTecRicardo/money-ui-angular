@@ -62,6 +62,15 @@ export class LancamentoCadastroComponent implements OnInit {
     this.carregarPessoas();
   }
 
+  get urlUploadAnexo() {
+    return this.lancamentoService.urlUploadAnexo();
+  }
+
+  get uploadHeaders() {
+    return this.lancamentoService.uploadHeaders();
+  }
+
+
   configurarFormulario(){
     
     this.formulario = this.formBuild.group({
@@ -173,6 +182,8 @@ salvar() {
   atualizarTituloEdicao(){
     this.title.setTitle(`Edição de lançamento: ${this.formulario.get('descricao').value}`);
   }
+
+  
 
 
 }

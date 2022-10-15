@@ -13,6 +13,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { TableModule } from 'primeng/table';
 import { TooltipModule } from 'primeng/tooltip';
+import { FileUploadModule} from 'primeng/fileupload';
 
 
 
@@ -40,6 +41,7 @@ import { LancamentosRoutingModule } from './lancamentos-routing-module';
     SelectButtonModule,
     DropdownModule,
     CurrencyMaskModule,
+    FileUploadModule,
 
     SharedModule,
     LancamentosRoutingModule,
